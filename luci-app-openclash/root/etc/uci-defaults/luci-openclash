@@ -222,7 +222,6 @@ fi
 #nginx backend (luci-nginx, newer LuCI): conf.d/*.conf is merged into the http block
 if [ -d /etc/nginx/conf.d ]; then
 	cat > /etc/nginx/conf.d/openclash.conf <<-EOF
-client_max_body_size 10m;
 uwsgi_read_timeout 3600;
 proxy_read_timeout 3600;
 EOF
